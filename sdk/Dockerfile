@@ -21,3 +21,10 @@ RUN yes | flutter doctor --android-licenses \
     && chown -R root:root ${FLUTTER_HOME}
 
 RUN flutter precache --android
+RUN sdkmanager "--update" "--verbose"
+RUN sdkmanager "ndk;28.0.13004108"
+RUN sdkmanager "ndk;27.0.12077973"
+RUN sdkmanager "platforms;android-36"
+RUN sdkmanager "platforms;android-34"
+RUN sdkmanager "platforms;android-31"
+RUN sdkmanager "cmake;3.22.1"
